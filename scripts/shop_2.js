@@ -1,3 +1,5 @@
+import { productosShopPage } from "../modules/products.js";
+
 /*const rutaShop_2Page = [
     {
         inicio: "Home",
@@ -23,27 +25,42 @@ return pre_compra;
 }
 llenarRuta();*/
 
-const productoPreCompra = {
-    imagenes: {
-       uno: "../images/Image 5.jpg",
-       dos: "../images/Image 5.png",
-       tres:"../images/Image 5 (1).png",
-       cuatro: "../images/Image 5 (2).png"
-    }
-    
-  };
+const idProduct = JSON.parse(localStorage.getItem("productId"));
 
-const fotoDetalle = document.getElementById("detalles-izquierdo");
-console.log(fotoDetalle);
+const productoId = () => productosShopPage.find((producto) => producto.id == idProduct);
+const productoPreCompra = productoId();
+
+
+
+const listaFotos = document.getElementById("detalles-izquierdo");
 
 const recorrerFotoDetalle = () => {
-    fotoDetalle.innerHTML = productoPreCompra.map((imagen) => {
-        `<a href="${imagen.imagenes}"> 
-        <img class="izquierdo-detalles-fotos-column" src="${imagen.imagenes}" alt="">
-        </a>`
-    }).join("");
-    return fotoDetalle;
-}
+  listaFotos.innerHTML = productoPreCompra.imagenes
+    .map((imagen) => {
+      return `<a href=""> 
+      <img class="izquierdo-detalles-fotos-column" src="${imagen}" alt="">
+    </a>`;
+    })
+    .join("");
+};
+
 recorrerFotoDetalle();
 
+const fotosDetalles = document.getElementById("detalles-izquierdo-1");
+fotosDetalles.innerHTML = `<img class="izquierdo-detalles-fotos-row" src="${productoPreCompra.imagen}" alt="">`;
 
+const nombreProducto = document.getElementById("detallesJoyas");
+nombreProducto.innerHTML = `<h2 class="titulo">${productoPreCompra.nombre}</h2>
+  <p class="codigo">${productoPreCompra.codigo}</p>
+                        <p class="precio">${productoPreCompra.precioUnitario}</p>
+                        <a class="seleccion-tonos" href="">Color-Rose Gold</a>`;
+
+const listaColor = document.getElementById("coloresJoya");
+ listaColor.innerHTML = productoPreCompra.colores.map((color)=>{
+  return `<img class="tonos" src="${color.imagen}" alt=""></img>`
+ }).join("");
+
+const listaTalla = document.getElementById("tallasBotones");
+listaColor.innerHTML = productoPreCompra.cantidadTalla.map ((tallas)=>{
+  return `<button class="talla">${tallas.talla}</button>`
+}).join("");
