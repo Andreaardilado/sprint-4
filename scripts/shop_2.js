@@ -29,65 +29,33 @@ nombreProducto.innerHTML = `
     <a class="seleccion-tonos" href="">Color-Rose Gold</a>
 `;
 
-// Colores
-const listaColor = document.getElementById("coloresJoya");
-listaColor.innerHTML = productoPreCompra.colores.map((color) => {
-    const nombreColor = color.titulo || 'Color Predeterminado'; // Utilizar titulo en lugar de nombre
-    return `<img class="tonos" src="${color.imagen}" alt="${nombreColor}" data-color="${nombreColor}"></img>`;
+// Colores y Tallas
+const listaColorYTalla = document.getElementById("coloresJoya");
+listaColorYTalla.innerHTML = productoPreCompra.colores.map((color) => {
+    const nombreColorTalla = color.titulo || 'Color Predeterminado'; // Utilizar titulo en lugar de nombre
+    return `<img class="tonos" src="${color.imagen}" alt="${nombreColorTalla}" color="${nombreColorTalla}"></img>`;
+}).join("") +
+productoPreCompra.cantidadTalla.map((tallas) => {
+    return `<button class="talla" talla="${tallas.talla}">${tallas.talla}</button>`;
 }).join("");
 
-// Tallas
-const listaTalla = document.getElementById("tallasBotones");
-listaTalla.innerHTML = productoPreCompra.cantidadTalla.map((tallas) => {
-    return `<button class="talla" data-talla="${tallas.talla}">${tallas.talla}</button>`;
-}).join("");
-
-// evento para colores
-const colores = document.querySelectorAll('.tonos');
-colores.forEach((color) => {
-    color.addEventListener('click', function () {
-        const colorSeleccionado = this.getAttribute('data-color');
-        alert(`Color: ${colorSeleccionado}`);
+// evento para colores y tallas
+const coloresYTallas = document.querySelectorAll('.tonos, .talla');
+coloresYTallas.forEach((elemento) => {
+    elemento.addEventListener('click', function () {
+        const atributo = elemento.classList.contains('tonos') ? 'color' : 'talla';
+        const seleccionado = elemento.getAttribute(atributo);
+        mostrarSeleccionado(atributo, seleccionado);
     });
 });
 
-// evento para tallas
-const tallas = document.querySelectorAll('.talla');
-tallas.forEach((talla) => {
-    talla.addEventListener('click', function () {
-        const tallaSeleccionada = this.getAttribute('data-talla');
-        alert(`Talla: ${tallaSeleccionada}`);
-    
-    });
-});
-
-// Manejador de eventos  botones de talla(consola)
-const botonesTalla = document.querySelectorAll('.talla');
-botonesTalla.forEach((boton) => {
-    boton.addEventListener('click', function () {
-        const tallaSeleccionada = this.getAttribute('data-talla');
-        mostrarTalla(tallaSeleccionada);
-    });
-});
-
-// Manejador de eventos para de colores (consola)
-const imagenesColores = document.querySelectorAll('.tonos');
-imagenesColores.forEach((imagen) => {
-    imagen.addEventListener('click', function () {
-        const colorSeleccionado = this.getAttribute('data-color');
-        mostrarColor(colorSeleccionado);
-    });
-});
-
-// Mostrar talla
-function mostrarTalla(talla) {
-    console.log(`Talla seleccionada: ${talla}`);
+// Mostrar color o talla
+function mostrarSeleccionado(atributo, seleccionado) {
+    console.log(`${atributo.charAt(0).toUpperCase() + atributo.slice(1)} seleccionado: ${seleccionado}`);
+    alert(`${atributo.charAt(0).toUpperCase() + atributo.slice(1)} seleccionado: ${seleccionado}`);
 }
 
-//Mostarr colores
-function mostrarColor(color) {
-    console.log(`Color seleccionado: ${color}`);
-}
+
 // Cantidades- variables
 let cantidadActual = 1;
 const cantidadElemento = document.querySelector('.uno'); // Elemento que muestra la cantidad
@@ -124,11 +92,13 @@ document.querySelector('.agregar-bolsa').addEventListener('click', function () {
         cantidad: cantidadSeleccionada,
     };
 
+    // Inicializar el array para productos seleccionados
+    let productosSeleccionados = [];
+
     // Agregar el producto seleccionado al array de productos
     productosSeleccionados.push(productoSeleccionado);
 
-    console.log(`Producto agregado ${cantidadSeleccionada} unidades.`);
-    // Mensaje al usuario
+    console.log(`Unidades seleccionadas ${cantidadSeleccionada}.`);
     alert("¡Se han agregado sus productos exitosamente!");
 });
 
@@ -146,24 +116,28 @@ document.querySelector('.compar-ahora').addEventListener('click', function () {
     window.location.href = `../pages/payment.html?producto=${encodeURIComponent(JSON.stringify(productoSeleccionado))}`;
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener el array de productos seleccionados del localStorage
+    const productosSeleccionados = JSON.parse(localStorage.getItem("productosSeleccionados")) || [];
 
-// Escuchador comprar ahora
-document.querySelector('.compar-ahora').addEventListener('click', function () {
-    // Información del producto
-    const nombreProducto = this.getAttribute('data-nombre');
-    const precioProducto = this.getAttribute('data-precio');
-    const cantidadSeleccionada = cantidadActual;
-    // lleva  a pasarela de pago con la información del producto y la cantidad
-    console.log(`Redirigiendo a la pasarela de pago con ${cantidadSeleccionada} unidades de ${nombreProducto} a $${precioProducto} cada uno.`);
+    // Iterar sobre los productos seleccionados 
+    productosSeleccionados.forEach(producto => {
+        
+        mostrarProductoSeleccionado(producto);
+    });
 });
 
-//  Botón de comprar ahora
-document.querySelector('.compar-ahora').addEventListener('click', function () {
-    // Información del producto
-    const nombreProducto = productoPreCompra.nombre;
-    const precioProducto = productoPreCompra.precioUnitario;
-    const cantidadSeleccionada = cantidadActual;
+// Función para mostrar el producto como seleccionado
+function mostrarProductoSeleccionado(producto) {
+   
+    const productoElemento = document.getElementById(producto.id);
 
-    // Envia la página de pago
-    window.location.href = `../pages/payment.html?producto=${nombreProducto}&precio=${precioProducto}&cantidad=${cantidadSeleccionada}`;
-});
+    if (productoElemento) {
+       
+        productoElemento.classList.add('producto-seleccionado');
+    }
+}
+
+
+
+    

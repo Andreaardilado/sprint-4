@@ -1,4 +1,3 @@
-
 import { productosShopPage } from "../modules/products.js";
 
 //filtro de productos
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// const contenedorProductos = document.getElementById("productos-shop-page");
+const contenedorProductos = document.getElementById("productos-shop-page");
 const listaProductos = document.getElementById("lista-productos");
 console.log(listaProductos);//capturamos la lista de productos del html
 
@@ -58,3 +57,55 @@ const irADetalleProducto = () => {
 
 irADetalleProducto();
 
+document.addEventListener('DOMContentLoaded', function () {
+  const listaProductos = document.getElementById("lista-productos");
+  const productos = Array.from(listaProductos.querySelectorAll('.catalogo'));
+
+  const ordenarProductos = (ascendente) => {
+      const sortedProductos = productos.sort((a, b) => {
+          const precioA = parseFloat(a.querySelector('.precio').textContent.replace('$', ''));
+          const precioB = parseFloat(b.querySelector('.precio').textContent.replace('$', ''));
+
+          return ascendente ? precioA - precioB : precioB - precioA;
+      });
+
+      listaProductos.innerHTML = ""; 
+      sortedProductos.forEach(producto => {
+          listaProductos.appendChild(producto);
+      });
+  };
+
+  // Verificar si el elemento con el ID ordenMayorMenor
+  const botonOrdenMayorMenor = document.getElementById('ordenMayorMenor');
+  if (botonOrdenMayorMenor) {
+      botonOrdenMayorMenor.addEventListener('click', function () {
+          ordenarProductos(false);
+      });
+  }
+
+  // ordenMenorMayor
+  const botonOrdenMenorMayor = document.getElementById('ordenMenorMayor');
+  if (botonOrdenMenorMayor) {
+      botonOrdenMenorMayor.addEventListener('click', function () {
+          ordenarProductos(true);
+      });
+  }
+});
+
+
+// Escuchador de eventos para producto seleccionado
+document.addEventListener('DOMContentLoaded', function () {
+  const botonSeleccionar = document.getElementById('pintarSeleccionados');
+
+  if (botonSeleccionar) {
+      botonSeleccionar.addEventListener('click', function () {
+          const elementosSeleccionados = document.querySelectorAll('.producto-seleccionado');
+
+          elementosSeleccionados.forEach(elemento => {
+              elemento.style.backgroundColor = 'lightblue'; 
+          });
+      });
+  } else {
+      console.error('No se encontró en el DOM.');
+  }
+});

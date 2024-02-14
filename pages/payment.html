@@ -22,7 +22,7 @@
             <a class="Link-navegacion-header" href=""><button class="boton-header-perfil"><img
                         src="../images/perfil 1.png" alt=""></button></a>
             <a class="Link-navegacion-header" href="../pages/payment.html"><button class="boton-header-carrito"><img
-                        src="../images/carrito de compras 1.png" alt=""></button></a>
+                        id="carroModal" src="../images/carrito de compras 1.png" alt=""></button></a>
         </div>
     </header>
 
@@ -36,7 +36,9 @@
                     <p class="codigo">Code: 78205</p>
                 </div>
                 <p class="precio">$620.73</p>
-                <button class="boton-borrar"><img src="../images/create.png" alt="borrar"></button>
+                <div id="contenedorTarjeta">
+                    <button class="boton-borrar"><img src="../images/create.png" alt="borrar"></button>
+                </div>
             </div>
             <div class="foto-order">
                 <img class="estilos-fotos" src="../images/Image (1).png" alt="areta">
@@ -56,11 +58,15 @@
                 <p class="precio">$327.71</p>
                 <button class="boton-borrar"><img src="../images/create.png" alt="borrar"></button>
             </div>
+            <div class="total-final">
+                <p class="detalles">Total</p>
+                <p class="precio-total-final">$1058.72</p>
+            </div>
 
         </div>
         <div class="payment-method">
             <div class="contenedor-payment-method">
-                <p class="titulo-payment">Payment method</p>
+                <!-- <p class="titulo-payment">Payment method</p>
                 <button class="boton-change">Change payment methods</button>
                 <div class="tarjetas">
                     <div class="contenedor-logo-banco"><img class="logo-tarjeta" src="../images/masterdarrd.png"
@@ -89,14 +95,39 @@
                         <div class="detalle-3">
                             <p class="detalles">Fee</p>
                             <p class="pre-total">$0</p>
-                        </div>
-                        <div class="total-final">
-                            <p class="detalles">Total</p>
-                            <p class="precio-total-final">$1058.72</p>
-                        </div>
-                    </div>
-                    <button class="proceder-pago" type="submit"> Proceed to payment</button>
-                </div>
+                        </div> -->
+                <form id="formularioCompra">
+                    <label for="nombreCompleto">Nombre Completo:</label>
+                    <input type="text" id="nombreCompleto" required>
+
+                    <label for="telefono">Teléfono Celular:</label>
+                    <input type="tel" id="telefono" required>
+
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" required>
+
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" required>
+
+                    <label for="tipoTarjeta">Tipo de Tarjeta:</label>
+                    <select id="tipoTarjeta" required>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+
+                    </select>
+                    <div id="contenedorTarjeta"><label for="numeroTarjeta">Número de Tarjeta:</label></div>
+
+                    <input type="text" id="numeroTarjeta" required>
+
+                    <label for="fechaCaducidad">Fecha de Caducidad:</label>
+                    <input type="text" id="fechaCaducidad" placeholder="MM/AA" required>
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" required>
+
+
+                    <button class="boton-pago" type="submit" onclick="compraCompletada()">Realizar Compra</button>
+
             </div>
         </div>
     </section>
@@ -108,11 +139,14 @@
         </div>
         <div class="galeria-carruseles">
             <ul class="card-carrusel">
-                <li class="fotos-carruseles"><img class="fotos-carruseles1" src="../images/Image 7 (1).png"
-                        alt="collar">
+
+                <li class="fotos-carruseles" data-id="100"><img class="fotos-carruseles1"
+                        src="../images/Image 7 (1).png" alt="collar">
                     <p class="referencia-carruseles">Shimmering Stones</p>
                     <p class="precio-carruseles">$168.76</p>
+
                 </li>
+
                 <li class="fotos-carruseles"><img class="fotos-carruseles1" src="../images/Image 7 (2).png"
                         alt="aretas">
                     <p class="referencia-carruseles">Exquisite Ornaments</p>
@@ -156,20 +190,31 @@
         </div>
         <div class="suscripciones-footer">
             <div>
-            <h6 class="titulo-suscripciones-footer">Subscribe to our newsletter</h6>
-            <p class="texto-suscripciones-footer">For product announcements and exclusive insights</p>
-            <input class="  input-suscripciones-footer" type="email" placeholder="  Input your email">
-            <button class="boton-footer" type="submit">Subscribe</button>
-        </div>
+                <h6 class="titulo-suscripciones-footer">Subscribe to our newsletter</h6>
+                <p class="texto-suscripciones-footer">For product announcements and exclusive insights</p>
+                <input class="  input-suscripciones-footer" type="email" placeholder="  Input your email">
+                <button class="boton-footer" type="submit">Subscribe</button>
+            </div>
             <div class="redes-sociales">
                 <a href="https://twitter.com/?lang=es"><img src="../images/Logo twitter 1.png" alt="twitter"></a>
-                    <a href="https://www.facebook.com/?locale=es_LA"><img src="../images/Logo facebook 1.png"
-                            alt="facebook"></a>
-                    <a href="https://www.linkedin.com/"><img src="../images/Logo linkedin 1.png" alt="linkedin"></a>
-                    <a href="https://www.youtube.com/"><img src="../images/Logo youtube 1.png" alt="youtube"></a>
+                <a href="https://www.facebook.com/?locale=es_LA"><img src="../images/Logo facebook 1.png"
+                        alt="facebook"></a>
+                <a href="https://www.linkedin.com/"><img src="../images/Logo linkedin 1.png" alt="linkedin"></a>
+                <a href="https://www.youtube.com/"><img src="../images/Logo youtube 1.png" alt="youtube"></a>
             </div>
         </div>
     </footer>
+
+    <div class="modalCart hidden">
+        <section>
+            <button id="closeModal">X</button>
+            <span>Contenido del modal</span>
+        </section>
+    </div>
+
+    <script src="../scripts/modal.js" type="module"></script>
     <script src="../scripts/payment.js" type="module"></script>
+    <!-- <script src="https://js.stripe.com/v3/" type="module"></script> -->
+
 
 </body>

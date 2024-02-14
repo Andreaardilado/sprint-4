@@ -4,6 +4,29 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+.modal {    
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #05050522;
+    /* visibility: hidden; */
+}
+
+.hidden{
+    display: none;
+}
+.show{
+    display: flex;
+}
+.modal section {    
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
 
 header {
     background: #093931;
@@ -684,3 +707,79 @@ input::placeholder{
     gap: 16px;
     margin: 17px 0;
 }
+
+#formularioCompra {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px; /* Decreased max-width for a smaller form */
+    margin: auto;
+}
+
+label {
+    margin-bottom: 2px; /* Further reduced margin-bottom for labels */
+    color: #323842;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px; /* Further decreased font size for labels */
+    font-weight: 500;
+    line-height: 18px; /* Further decreased line-height for labels */
+}
+
+input,
+select {
+    width: 100%;
+    padding: 6px; /* Further decreased padding for input/select */
+    margin-bottom: 8px; /* Further reduced margin-bottom for input/select */
+    border: 1px solid #565E6C;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    appearance: none;
+    background: url('arrow-down.png') no-repeat right center / 8px; /* Further adjusted background size for the select arrow */
+}
+
+button {
+    background-color: #0D554A;
+    color: #FFF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px; /* Further decreased font size for the button */
+    font-weight: 600;
+    line-height: 22px; /* Further decreased line-height for the button */
+    padding: 6px 10px; /* Further adjusted padding for the button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #093931;
+}
+
+.total-final {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .precio-total-final {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .total-final {
+    background-color: #093931; 
+    border-radius: 8px;
+    margin-top: 10px; 
+  }
+  
+  .detalles {
+    font-size: 18px; 
+    font-weight: bold;
+  }
+  
+  .precio-total-final {
+    font-size: 28px; 
+    margin-top: 8px; 
+  }

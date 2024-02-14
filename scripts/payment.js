@@ -1,49 +1,99 @@
-// DOM
-const totalElement = document.querySelector('.precio-total-final');
-const applyDiscountButton = document.querySelector('.boton-aplicar-bono');
-const discountInput = document.querySelector('[name="bono-descuento"]');
-const proceedToPaymentButton = document.querySelector('.proceder-pago');
-const orderSummary = document.querySelector('.order-summary');
+// Importar productosShopPage desde el módulo products.js
+import { productosShopPage } from "../modules/products.js";
 
-// Lista de productos agrgados
-const productosSeleccionados = [
-];
 
-// Variable total
-let total = calcularTotal();
+const URL_BASE = "";
+//hacemos una petición get
+const getProducts = async (url) => {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};
 
-// Actualiza  total al cargar 
-totalCompra();
+const containerProducts = document.getElementById("container-products");
 
-// Terminar pago
-proceedToPaymentButton.addEventListener('click', () => {
-    proceedToPayment();
-});
+const form = document.getElementById("formularioCompra");
 
-// Calcula el total
-function calcularTotal() {
-    return productosSeleccionados.reduce((accum, producto) => accum + producto.precioUnitario, 0);
-}
+const insertarProductos = (contenedor, listaProductos) => {
+  contenedor.innerHTML = "";
+  listaProductos.forEach((producto) => {
+    contenedor.innerHTML += `
+        <article class="cardProducto" name=${producto.id}>
+            <figure>
+                <img src=${producto.imagenes[0]} alt=${producto.nombre}>
+            </figure>
+            <span>$ ${producto.precioUnitario.toLocaleString()}</span>
+            <h3>${producto.nombre}</h3>
+        </article>
+        `;
+  });
+};
 
-// Actualizza el total
-function totalCompra() {
-    totalElement.textContent = `$${total.toFixed(2)}`;
-}
+const obtenerDatosDelForm = (form) => {
+  const formData = new FormData(form);
+  const dataForm = {};
+  for (const [key, value] of formData.entries()) {
+    dataForm[key] = value;
+  }
+  return dataForm;
+};
 
-// Proceder a pagar 
-function proceedToPayment() {
-    alert('¡Gracias por tu compra! Redirigiendo al proceso de pago...');
-    // Aquí puedes agregar lógica adicional para el proceso de pago, como redirigir a una página de pago real.
-}
+const validateDataForm = (dataForm) => {
+  let emptyFields = [];
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-// elimionar Prodcutos
-orderSummary.addEventListener('click', (event) => {
-    const deleteButton = event.target.closest('.boton-borrar');
-    
-    if (deleteButton) {
-        const orderItem = deleteButton.closest('.foto-order');
-        orderItem.remove();
-        total = calcularTotal(); // Actualiza el nuevo total
-        totalCompra(); // Actualiza total
+  for (const key in dataForm) {
+    if (dataForm[key].trim() == "") {
+      emptyFields.push(key);
     }
+  }
+
+  if (!dataForm.talla) {
+    emptyFields.push("talla");
+  }
+
+  if (dataForm.nombre.length <= 3) {
+    alert("El nombre debe contener más de 3 caracteres");
+    emptyFields.push("nombre");
+  }
+
+  if (!emailRegex.test(dataForm.email)) {
+    alert("El email ingresado no es valido");
+    emptyFields.push("email");
+  }
+
+  return emptyFields.length > 0 ? emptyFields : false;
+};
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const url = `${URL_BASE}productos`;
+  const productos = await getProducts(url);
+  insertarProductos(containerProducts, productos);
 });
+
+form.addEventListener("submit", (evento) => {
+  evento.preventDefault();
+
+  const newProduct = obtenerDatosDelForm(form);
+  const validation = validateDataForm(newProduct);
+
+  if (validation) {
+    alert(
+      "El formulario tiene los siguientes datos vacíos " + validation.toString()
+    );
+  } else {
+    agregarProducto(newProduct, productos); // Asegúrate de que 'productos' esté definido.
+    insertarProductos(containerProducts, productos);
+    form.reset();
+  }
+});
+
+const compraCompletada = () => {
+  
+  alert("Compra completada exitosamente");
+};
