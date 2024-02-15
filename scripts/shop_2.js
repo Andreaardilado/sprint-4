@@ -83,6 +83,7 @@ function actualizarCantidad() {
 document.querySelector('.agregar-bolsa').addEventListener('click', function () {
     // Obtener la cantidad seleccionada
     const cantidadSeleccionada = cantidadActual;
+    let productosSeleccionados = [];
 
     // Obtener información del producto seleccionado
     const productoSeleccionado = {
@@ -90,14 +91,19 @@ document.querySelector('.agregar-bolsa').addEventListener('click', function () {
         nombre: productoPreCompra.nombre,
         precioUnitario: productoPreCompra.precioUnitario,
         cantidad: cantidadSeleccionada,
+        imagen: productoPreCompra.imagen,
+        codigo: productoPreCompra.codigo,
     };
 
     // Inicializar el array para productos seleccionados
-    let productosSeleccionados = [];
+    let antiguosProductosSeleccionados = JSON.parse(localStorage.getItem("productosSeleccionados"));
+    if (antiguosProductosSeleccionados) {
+        productosSeleccionados = antiguosProductosSeleccionados;
+    }
 
     // Agregar el producto seleccionado al array de productos
     productosSeleccionados.push(productoSeleccionado);
-
+    localStorage.setItem("productosSeleccionados", JSON.stringify(productosSeleccionados));
     console.log(`Unidades seleccionadas ${cantidadSeleccionada}.`);
     alert("¡Se han agregado sus productos exitosamente!");
 });

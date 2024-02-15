@@ -3,6 +3,10 @@ import { productosShopPage } from "../modules/products.js";
 // Capturar botón carrito de compras
 const botonCart = document.getElementById("carroModal");
 
+const irAPago = () => {
+    location.href = "../pages/payment.html";
+}
+
 // Función mostrar carro
 const showcart = (button) => {
     // Escuchador evento
@@ -15,8 +19,11 @@ const showcart = (button) => {
             modalContainer.classList.add("modal");
             modalContainer.innerHTML = `
                 <section>
-                    <button id="closeModal">X</button>
-                    <span>contenido</span>
+                    <article>
+                        <button id="closeModal">X</button>
+                        <span>contenido</span>
+                    <article>
+                    <a href="../pages/payment.html">Continuar con el pago</a>
                 </section>
             `;
             document.body.appendChild(modalContainer);
@@ -38,6 +45,8 @@ const closecart = () => {
         }
     });
 }
+
+
 
 showcart(botonCart);
 closecart();

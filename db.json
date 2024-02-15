@@ -1,341 +1,341 @@
 {
-    "productos":[
+  "productos": [
+    {
+      "id": 12,
+      "nombre": "Luxury Gems Necklace",
+      "codigo": "N0123",
+      "precioUnitario": 168.76,
+      "tipoAccesorio": "Necklace",
+      "imagen": "../images/Luxury Gems Necklace.png",
+      "descripcion": "Collar gema rosada",
+      "colores": [
         {
-            "id": 12,
-            "nombre": "Luxury Gems Necklace",
-           "codigo": "N0123",
-           "precioUnitario": 168.76,
-            "tipoAccesorio": "Necklace",
-            "imagen": "../images/Luxury Gems Necklace.png",
-            "descripcion": "Collar gema rosada",
-            "colores": [
-              {
-                "titulo": "Rose Gold",
-                "cantidad": 40,
-                "imagen": "../images/Oval 1.jpg"
-              },
-              {
-                "titulo": "Silver",
-                "cantidad": 18,
-                "imagen": "../images/Oval 1 (1).jpg"
-              }
-            ],
-            "cantidadTalla": [
-              { "talla": 48, "cantidad": 4 },
-              { "talla": 50, "cantidad": 7 },
-              { "talla": 52, "cantidad": 0 },
-              { "talla": 54, "cantidad": 0 },
-              { "talla": 56, "cantidad": 5 },
-              { "talla": 58, "cantidad": 10 },
-              { "talla": 60, "cantidad": 10 },
-              { "talla": 62, "cantidad": 4 },
-              { "talla": 64, "cantidad": 5 },
-              { "talla": 66, "cantidad": 5 },
-              { "talla": 68, "cantidad": 2 },
-              { "talla": 70, "cantidad": 6 }
-            ],
-            "imagenes": [
-              "../images/Image 5.jpg",
-              "../images/Image 5.png",
-              "../images/Image 5.png",
-              "../images/Image 5 (1).png",
-              "../images/Image 5 (2).png"
-            ]
-          },
-          {
-            "id": 1,
-            "nombre": "Aurora Ring",
-            "codigo": "AN123",
-            "precioUnitario": 125.28,
-            "tipoAccesorio": "anillo",
-            "imagen": "../images/Aurora Ring.png",
-            "descripcion": "Anillo diamantado olas",
-            "colores": [
-              {
-                "titulo": "Rose Gold",
-                "cantidad": 40,
-                "imagen": "../images/Oval 1.jpg"
-              },
-              {
-                "titulo": "Silver",
-                "cantidad": 18,
-                "imagen": "../images/Oval 1 (1).jpg"
-              }
-            ],
-            "cantidadTalla": [
-              { "talla": 48, "cantidad": 4 },
-              { "talla": 50, "cantidad": 7 },
-              { "talla": 52, "cantidad": 0 },
-              { "talla": 54, "cantidad": 0 },
-              { "talla": 56, "cantidad": 5 },
-              { "talla": 58, "cantidad": 10 },
-              { "talla": 60, "cantidad": 10 },
-              { "talla": 62, "cantidad": 4 },
-              { "talla": 64, "cantidad": 5 },
-              { "talla": 66, "cantidad": 5 },
-              { "talla": 68, "cantidad": 2 },
-              { "talla": 70, "cantidad": 6 }
-            ],
-            "imagenes": [
-              "../images/Image 5.jpg",
-              "../images/Image 5.png",
-              "../images/Image 5.png",
-              "../images/Image 5 (1).png",
-              "../images/Image 5 (2).png"
-            ]
-          },
-          {
-           " id": 13,
-            "nombre": "Reflections Necklace",
-           " codigo": "N0124",
-           " precioUnitario": 620.73,
-            "tipoAccesorio": "Necklace",
-            "imagen": "../images/Reflections Necklace.png",
-            "descripcion": "Collar serpiente rojo-negro-dorado",
-            "colores": [
-              {
-                "titulo": "Rose Gold",
-                "cantidad": 40,
-                "imagen": "../images/Oval 1.jpg"
-              },
-              {
-                "titulo": "Silver",
-                "cantidad": 18,
-                "imagen": "../images/Oval 1 (1).jpg"
-              }
-            ],
-            "cantidadTalla": [
-              { "talla": 48, "cantidad": 4 },
-              { "talla": 50, "cantidad": 7 },
-              { "talla": 52, "cantidad": 0 },
-              { "talla": 54, "cantidad": 0 },
-              { "talla": 56, "cantidad": 5 },
-              { "talla": 58, "cantidad": 10 },
-              { "talla": 60, "cantidad": 10 },
-              { "talla": 62, "cantidad": 4 },
-              { "talla": 64, "cantidad": 5 },
-              { "talla": 66, "cantidad": 5 },
-              { "talla": 68, "cantidad": 2 },
-              { "talla": 70, "cantidad": 6 }
-            ],
-            "imagenes": [
-              "../images/Image 5.jpg",
-              "../images/Image 5.png",
-              "../images/Image 5.png",
-              "../images/Image 5 (1).png",
-              "../images/Image 5 (2).png"
-            ]
-          },
-          {
-           " id": 2,
-            "nombre": "Dreamy Infinity Ring",
-           " codigo": "AN124",
-           " precioUnitario": 327.71,
-            "tipoAccesorio": "anillo",
-            "imagen": "../images/Dreamy Infinity Ring.png",
-            "descripcion": "Anillo diamante rosa",
-            "colores": [
-              {
-                "titulo": "Rose Gold",
-                "cantidad": 40,
-                "imagen": "../images/Oval 1.jpg"
-              },
-              {
-                "titulo": "Silver",
-                "cantidad": 18,
-                "imagen": "../images/Oval 1 (1).jpg"
-              }
-            ],
-            "cantidadTalla": [
-              { "talla": 48, "cantidad": 4 },
-              { "talla": 50, "cantidad": 7 },
-              { "talla": 52, "cantidad": 0 },
-              { "talla": 54, "cantidad": 0 },
-              { "talla": 56, "cantidad": 5 },
-              { "talla": 58, "cantidad": 10 },
-              { "talla": 60, "cantidad": 10 },
-              { "talla": 62, "cantidad": 4 },
-              { "talla": 64, "cantidad": 5 },
-              { "talla": 66, "cantidad": 5 },
-              { "talla": 68, "cantidad": 2 },
-              { "talla": 70, "cantidad": 6 }
-            ],
-            "imagenes": [
-              "../images/Image 5.jpg",
-              "../images/Image 5.png",
-              "../images/Image 5.png",
-              "../images/Image 5 (1).png",
-              "../images/Image 5 (2).png"
-            ]
-          },
-          {
-           " id": 3,
-            "nombre": "Opulent Jewels Ring",
-           " codigo": "AN125",
-           " precioUnitario": 168.76,
-            "tipoAccesorio": "anillo",
-            "imagen": "../images/Opulent Jewels Ring.png",
-            "descripcion": "Anillo gato",
-            "colores": [
-              {
-               " titulo": "Rose Gold",
-                "cantidad": 40,
-                "imagen": "../images/Oval 1.jpg"
-              },
-              {
-               " titulo": "Silver",
-                "cantidad": 18,
-                "imagen": "../images/Oval 1 (1).jpg"
-              }
-            ],
-            "cantidadTalla": [
-              { "talla": 48, "cantidad": 4 },
-              { "talla": 50, "cantidad": 7 },
-              { "talla": 52, "cantidad": 0 },
-              { "talla": 54, "cantidad": 0 },
-              { "talla": 56, "cantidad": 5 },
-              { "talla": 58, "cantidad": 10 },
-              { "talla": 60, "cantidad": 10 },
-              { "talla": 62, "cantidad": 4 },
-              { "talla": 64, "cantidad": 5 },
-              { "talla": 66, "cantidad": 5 },
-              { "talla": 68, "cantidad": 2 },
-              { "talla": 70, "cantidad": 6 }
-            ],
-            "imagenes": [
-              "../images/Image 5.jpg",
-              "../images/Image 5.png",
-              "../images/Image 5.png",
-              "../images/Image 5 (1).png",
-              "../images/Image 5 (2).png"
-            ]
-          },
-          {
-           " id": 29,
-            "nombre": "Serene Solitaire Earrings",
-           " codigo": "AR124",
-           " precioUnitario": 620.73,
-            "tipoAccesorio": "aretes",
-            "imagen": "../images/Timeless Halo Earrings.png",
-            "descripcion": "Aretes crital cuadrado",
-            "colores": [
-              {
-               " titulo": "Rose Gold",
-                "cantidad": 40,
-                "imagen": "../images/Oval 1.jpg"
-              },
-              {
-               " titulo": "Silver",
-                "cantidad": 18,
-                "imagen": "../images/Oval 1 (1).jpg"
-              }
-            ],
-            "cantidadTalla": [
-              { "talla": 48, "cantidad": 4 },
-              { "talla": 50, "cantidad": 7 },
-              { "talla": 52, "cantidad": 0 },
-              { "talla": 54, "cantidad": 0 },
-              { "talla": 56, "cantidad": 5 },
-              { "talla": 58, "cantidad": 10 },
-              { "talla": 60, "cantidad": 10 },
-              { "talla": 62, "cantidad": 4 },
-              { "talla": 64, "cantidad": 5 },
-              { "talla": 66, "cantidad": 5 },
-              { "talla": 68, "cantidad": 2 },
-              { "talla": 70, "cantidad": 6 }
-            ],
-            "imagenes": [
-              "../images/Image 5.jpg",
-              "../images/Image 5.png",
-              "../images/Image 5.png",
-              "../images/Image 5 (1).png",
-              "../images/Image 5 (2).png"
-            ]
-          },
-          {
-           " id": 20,
-            "nombre": "Exquisite Earrings",
-           " codigo": "AR125",
-           " precioUnitario": 620.73,
-            "tipoAccesorio": "aretes",
-            "imagen": "../images/Exquisite Earrings.png",
-            "descripcion": "Aretes gota de agua tallados",
-            "colores": [
-              {
-               " titulo": "Rose Gold",
-                "cantidad": 40,
-                "imagen": "../images/Oval 1.jpg"
-              },
-              {
-               " titulo": "Silver",
-                "cantidad": 18,
-                "imagen": "../images/Oval 1 (1).jpg"
-              }
-            ],
-            "cantidadTalla": [
-              { "talla": 48, "cantidad": 4 },
-              { "talla": 50, "cantidad": 7 },
-              { "talla": 52, "cantidad": 0 },
-              { "talla": 54, "cantidad": 0 },
-              { "talla": 56, "cantidad": 5 },
-              { "talla": 58, "cantidad": 10 },
-              { "talla": 60, "cantidad": 10 },
-              { "talla": 62, "cantidad": 4 },
-              { "talla": 64, "cantidad": 5 },
-              { "talla": 66, "cantidad": 5 },
-              { "talla": 68, "cantidad": 2 },
-              { "talla": 70, "cantidad": 6 }
-            ],
-            "imagenes": [
-              "../images/Image 5.jpg",
-              "../images/Image 5.png",
-              "../images/Image 5.png",
-              "../images/Image 5 (1).png",
-              "../images/Image 5 (2).png"
-            ]
-          },
-          {
-           " id": 4,
-            "nombre": "Timeless Elegance Ring",
-           " codigo": "AN126",
-           " precioUnitario": 125.28,
-            "tipoAccesorio": "anillo",
-            "imagen": "../images/Timeless Elegance Ring.png",
-            "descripcion": "3 en 1 lila",
-            "colores": [
-              {
-               " titulo": "Rose Gold",
-                "cantidad": 40,
-                "imagen": "../images/Oval 1.jpg"
-              },
-              {
-               " titulo": "Silver",
-                "cantidad": 18,
-                "imagen": "../images/Oval 1 (1).jpg"
-              }
-            ],
-            "cantidadTalla": [
-              { "talla": 48, "cantidad": 4 },
-              { "talla": 50, "cantidad": 7 },
-              { "talla": 52, "cantidad": 0 },
-              { "talla": 54, "cantidad": 0 },
-              { "talla": 56, "cantidad": 5 },
-              { "talla": 58, "cantidad": 10 },
-              { "talla": 60, "cantidad": 10 },
-              { "talla": 62, "cantidad": 4 },
-              { "talla": 64, "cantidad": 5 },
-              { "talla": 66, "cantidad": 5 },
-              { "talla": 68, "cantidad": 2 },
-              { "talla": 70, "cantidad": 6 }
-            ],
-            "imagenes": [
-              "../images/Image 5.jpg",
-              "../images/Image 5.png",
-              "../images/Image 5.png",
-              "../images/Image 5 (1).png",
-              "../images/Image 5 (2).png"
-            ]
-          }
-    ],
-    "ordenesCompra": []
+          "titulo": "Rose Gold",
+          "cantidad": 40,
+          "imagen": "../images/Oval 1.jpg"
+        },
+        {
+          "titulo": "Silver",
+          "cantidad": 18,
+          "imagen": "../images/Oval 1 (1).jpg"
+        }
+      ],
+      "cantidadTalla": [
+        { "talla": 48, "cantidad": 4 },
+        { "talla": 50, "cantidad": 7 },
+        { "talla": 52, "cantidad": 0 },
+        { "talla": 54, "cantidad": 0 },
+        { "talla": 56, "cantidad": 5 },
+        { "talla": 58, "cantidad": 10 },
+        { "talla": 60, "cantidad": 10 },
+        { "talla": 62, "cantidad": 4 },
+        { "talla": 64, "cantidad": 5 },
+        { "talla": 66, "cantidad": 5 },
+        { "talla": 68, "cantidad": 2 },
+        { "talla": 70, "cantidad": 6 }
+      ],
+      "imagenes": [
+        "../images/Image 5.jpg",
+        "../images/Image 5.png",
+        "../images/Image 5.png",
+        "../images/Image 5 (1).png",
+        "../images/Image 5 (2).png"
+      ]
+    },
+    {
+      "id": 1,
+      "nombre": "Aurora Ring",
+      "codigo": "AN123",
+      "precioUnitario": 125.28,
+      "tipoAccesorio": "anillo",
+      "imagen": "../images/Aurora Ring.png",
+      "descripcion": "Anillo diamantado olas",
+      "colores": [
+        {
+          "titulo": "Rose Gold",
+          "cantidad": 40,
+          "imagen": "../images/Oval 1.jpg"
+        },
+        {
+          "titulo": "Silver",
+          "cantidad": 18,
+          "imagen": "../images/Oval 1 (1).jpg"
+        }
+      ],
+      "cantidadTalla": [
+        { "talla": 48, "cantidad": 4 },
+        { "talla": 50, "cantidad": 7 },
+        { "talla": 52, "cantidad": 0 },
+        { "talla": 54, "cantidad": 0 },
+        { "talla": 56, "cantidad": 5 },
+        { "talla": 58, "cantidad": 10 },
+        { "talla": 60, "cantidad": 10 },
+        { "talla": 62, "cantidad": 4 },
+        { "talla": 64, "cantidad": 5 },
+        { "talla": 66, "cantidad": 5 },
+        { "talla": 68, "cantidad": 2 },
+        { "talla": 70, "cantidad": 6 }
+      ],
+      "imagenes": [
+        "../images/Image 5.jpg",
+        "../images/Image 5.png",
+        "../images/Image 5.png",
+        "../images/Image 5 (1).png",
+        "../images/Image 5 (2).png"
+      ]
+    },
+    {
+      "id": 13,
+      "nombre": "Reflections Necklace",
+      "codigo": "N0124",
+      "precioUnitario": 620.73,
+      "tipoAccesorio": "Necklace",
+      "imagen": "../images/Reflections Necklace.png",
+      "descripcion": "Collar serpiente rojo-negro-dorado",
+      "colores": [
+        {
+          "titulo": "Rose Gold",
+          "cantidad": 40,
+          "imagen": "../images/Oval 1.jpg"
+        },
+        {
+          "titulo": "Silver",
+          "cantidad": 18,
+          "imagen": "../images/Oval 1 (1).jpg"
+        }
+      ],
+      "cantidadTalla": [
+        { "talla": 48, "cantidad": 4 },
+        { "talla": 50, "cantidad": 7 },
+        { "talla": 52, "cantidad": 0 },
+        { "talla": 54, "cantidad": 0 },
+        { "talla": 56, "cantidad": 5 },
+        { "talla": 58, "cantidad": 10 },
+        { "talla": 60, "cantidad": 10 },
+        { "talla": 62, "cantidad": 4 },
+        { "talla": 64, "cantidad": 5 },
+        { "talla": 66, "cantidad": 5 },
+        { "talla": 68, "cantidad": 2 },
+        { "talla": 70, "cantidad": 6 }
+      ],
+      "imagenes": [
+        "../images/Image 5.jpg",
+        "../images/Image 5.png",
+        "../images/Image 5.png",
+        "../images/Image 5 (1).png",
+        "../images/Image 5 (2).png"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Dreamy Infinity Ring",
+      "codigo": "AN124",
+      "precioUnitario": 327.71,
+      "tipoAccesorio": "anillo",
+      "imagen": "../images/Dreamy Infinity Ring.png",
+      "descripcion": "Anillo diamante rosa",
+      "colores": [
+        {
+          "titulo": "Rose Gold",
+          "cantidad": 40,
+          "imagen": "../images/Oval 1.jpg"
+        },
+        {
+          "titulo": "Silver",
+          "cantidad": 18,
+          "imagen": "../images/Oval 1 (1).jpg"
+        }
+      ],
+      "cantidadTalla": [
+        { "talla": 48, "cantidad": 4 },
+        { "talla": 50, "cantidad": 7 },
+        { "talla": 52, "cantidad": 0 },
+        { "talla": 54, "cantidad": 0 },
+        { "talla": 56, "cantidad": 5 },
+        { "talla": 58, "cantidad": 10 },
+        { "talla": 60, "cantidad": 10 },
+        { "talla": 62, "cantidad": 4 },
+        { "talla": 64, "cantidad": 5 },
+        { "talla": 66, "cantidad": 5 },
+        { "talla": 68, "cantidad": 2 },
+        { "talla": 70, "cantidad": 6 }
+      ],
+      "imagenes": [
+        "../images/Image 5.jpg",
+        "../images/Image 5.png",
+        "../images/Image 5.png",
+        "../images/Image 5 (1).png",
+        "../images/Image 5 (2).png"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Opulent Jewels Ring",
+      "codigo": "AN125",
+      "precioUnitario": 168.76,
+      "tipoAccesorio": "anillo",
+      "imagen": "../images/Opulent Jewels Ring.png",
+      "descripcion": "Anillo gato",
+      "colores": [
+        {
+          " titulo": "Rose Gold",
+          "cantidad": 40,
+          "imagen": "../images/Oval 1.jpg"
+        },
+        {
+          " titulo": "Silver",
+          "cantidad": 18,
+          "imagen": "../images/Oval 1 (1).jpg"
+        }
+      ],
+      "cantidadTalla": [
+        { "talla": 48, "cantidad": 4 },
+        { "talla": 50, "cantidad": 7 },
+        { "talla": 52, "cantidad": 0 },
+        { "talla": 54, "cantidad": 0 },
+        { "talla": 56, "cantidad": 5 },
+        { "talla": 58, "cantidad": 10 },
+        { "talla": 60, "cantidad": 10 },
+        { "talla": 62, "cantidad": 4 },
+        { "talla": 64, "cantidad": 5 },
+        { "talla": 66, "cantidad": 5 },
+        { "talla": 68, "cantidad": 2 },
+        { "talla": 70, "cantidad": 6 }
+      ],
+      "imagenes": [
+        "../images/Image 5.jpg",
+        "../images/Image 5.png",
+        "../images/Image 5.png",
+        "../images/Image 5 (1).png",
+        "../images/Image 5 (2).png"
+      ]
+    },
+    {
+      "id": 29,
+      "nombre": "Serene Solitaire Earrings",
+      "codigo": "AR124",
+      "precioUnitario": 620.73,
+      "tipoAccesorio": "aretes",
+      "imagen": "../images/Timeless Halo Earrings.png",
+      "descripcion": "Aretes crital cuadrado",
+      "colores": [
+        {
+          " titulo": "Rose Gold",
+          "cantidad": 40,
+          "imagen": "../images/Oval 1.jpg"
+        },
+        {
+          " titulo": "Silver",
+          "cantidad": 18,
+          "imagen": "../images/Oval 1 (1).jpg"
+        }
+      ],
+      "cantidadTalla": [
+        { "talla": 48, "cantidad": 4 },
+        { "talla": 50, "cantidad": 7 },
+        { "talla": 52, "cantidad": 0 },
+        { "talla": 54, "cantidad": 0 },
+        { "talla": 56, "cantidad": 5 },
+        { "talla": 58, "cantidad": 10 },
+        { "talla": 60, "cantidad": 10 },
+        { "talla": 62, "cantidad": 4 },
+        { "talla": 64, "cantidad": 5 },
+        { "talla": 66, "cantidad": 5 },
+        { "talla": 68, "cantidad": 2 },
+        { "talla": 70, "cantidad": 6 }
+      ],
+      "imagenes": [
+        "../images/Image 5.jpg",
+        "../images/Image 5.png",
+        "../images/Image 5.png",
+        "../images/Image 5 (1).png",
+        "../images/Image 5 (2).png"
+      ]
+    },
+    {
+      "id": 20,
+      "nombre": "Exquisite Earrings",
+      "codigo": "AR125",
+      "precioUnitario": 620.73,
+      "tipoAccesorio": "aretes",
+      "imagen": "../images/Exquisite Earrings.png",
+      "descripcion": "Aretes gota de agua tallados",
+      "colores": [
+        {
+          " titulo": "Rose Gold",
+          "cantidad": 40,
+          "imagen": "../images/Oval 1.jpg"
+        },
+        {
+          " titulo": "Silver",
+          "cantidad": 18,
+          "imagen": "../images/Oval 1 (1).jpg"
+        }
+      ],
+      "cantidadTalla": [
+        { "talla": 48, "cantidad": 4 },
+        { "talla": 50, "cantidad": 7 },
+        { "talla": 52, "cantidad": 0 },
+        { "talla": 54, "cantidad": 0 },
+        { "talla": 56, "cantidad": 5 },
+        { "talla": 58, "cantidad": 10 },
+        { "talla": 60, "cantidad": 10 },
+        { "talla": 62, "cantidad": 4 },
+        { "talla": 64, "cantidad": 5 },
+        { "talla": 66, "cantidad": 5 },
+        { "talla": 68, "cantidad": 2 },
+        { "talla": 70, "cantidad": 6 }
+      ],
+      "imagenes": [
+        "../images/Image 5.jpg",
+        "../images/Image 5.png",
+        "../images/Image 5.png",
+        "../images/Image 5 (1).png",
+        "../images/Image 5 (2).png"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Timeless Elegance Ring",
+      "codigo": "AN126",
+      "precioUnitario": 125.28,
+      "tipoAccesorio": "anillo",
+      "imagen": "../images/Timeless Elegance Ring.png",
+      "descripcion": "3 en 1 lila",
+      "colores": [
+        {
+          " titulo": "Rose Gold",
+          "cantidad": 40,
+          "imagen": "../images/Oval 1.jpg"
+        },
+        {
+          " titulo": "Silver",
+          "cantidad": 18,
+          "imagen": "../images/Oval 1 (1).jpg"
+        }
+      ],
+      "cantidadTalla": [
+        { "talla": 48, "cantidad": 4 },
+        { "talla": 50, "cantidad": 7 },
+        { "talla": 52, "cantidad": 0 },
+        { "talla": 54, "cantidad": 0 },
+        { "talla": 56, "cantidad": 5 },
+        { "talla": 58, "cantidad": 10 },
+        { "talla": 60, "cantidad": 10 },
+        { "talla": 62, "cantidad": 4 },
+        { "talla": 64, "cantidad": 5 },
+        { "talla": 66, "cantidad": 5 },
+        { "talla": 68, "cantidad": 2 },
+        { "talla": 70, "cantidad": 6 }
+      ],
+      "imagenes": [
+        "../images/Image 5.jpg",
+        "../images/Image 5.png",
+        "../images/Image 5.png",
+        "../images/Image 5 (1).png",
+        "../images/Image 5 (2).png"
+      ]
+    }
+  ],
+  "ordenesCompra": []
 }

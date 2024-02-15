@@ -27,9 +27,9 @@
     </header>
 
     <section class="terminacion-orden">
-        <div class="order-summary">
+        <div id="order-summary" class="order-summary">
             <p class="titulo-order-summary">Order summary</p>
-            <div class="foto-order">
+            <!-- <div class="foto-order">
                 <img class="estilos-fotos" src="../images/Image.png" alt="anillo">
                 <div class="contenedor-ref">
                     <p class="referencia">Luxury Charms Ring</p>
@@ -61,7 +61,7 @@
             <div class="total-final">
                 <p class="detalles">Total</p>
                 <p class="precio-total-final">$1058.72</p>
-            </div>
+            </div> -->
 
         </div>
         <div class="payment-method">
@@ -98,19 +98,19 @@
                         </div> -->
                 <form id="formularioCompra">
                     <label for="nombreCompleto">Nombre Completo:</label>
-                    <input type="text" id="nombreCompleto" required>
+                    <input type="text" id="nombreCompleto" name="nombreCompleto" required>
 
                     <label for="telefono">Teléfono Celular:</label>
-                    <input type="tel" id="telefono" required>
+                    <input type="tel" id="telefono" name="telefono" required>
 
                     <label for="direccion">Dirección:</label>
-                    <input type="text" id="direccion" required>
+                    <input type="text" id="direccion" name="direccion" required>
 
                     <label for="correo">Correo Electrónico:</label>
-                    <input type="email" id="correo" required>
+                    <input type="email" id="correo" name="correo" required>
 
                     <label for="tipoTarjeta">Tipo de Tarjeta:</label>
-                    <select id="tipoTarjeta" required>
+                    <select id="tipoTarjeta" name="tipoTarjeta" required>
                         <option value="visa">Visa</option>
                         <option value="mastercard">MasterCard</option>
 
@@ -120,13 +120,13 @@
                     <input type="text" id="numeroTarjeta" required>
 
                     <label for="fechaCaducidad">Fecha de Caducidad:</label>
-                    <input type="text" id="fechaCaducidad" placeholder="MM/AA" required>
+                    <input type="text" id="fechaCaducidad" name="fechaCaducidad" placeholder="MM/AA" required>
 
                     <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" required>
+                    <input type="text" id="cvv" name="cvv" required>
 
 
-                    <button class="boton-pago" type="submit" onclick="compraCompletada()">Realizar Compra</button>
+                    <button class="boton-pago" type="submit" >Realizar Compra</button>
 
             </div>
         </div>
@@ -214,7 +214,8 @@
 
     <script src="../scripts/modal.js" type="module"></script>
     <script src="../scripts/payment.js" type="module"></script>
-    <!-- <script src="https://js.stripe.com/v3/" type="module"></script> -->
+    <script src="../modules/products.js" type="module"></script>
+    
 
 
 </body>

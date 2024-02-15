@@ -2,7 +2,7 @@
 import { productosShopPage } from "../modules/products.js";
 
 
-const URL_BASE = "";
+const URL_BASE = "https://darling.free.beeceptor.com";
 //hacemos una petición get
 const getProducts = async (url) => {
   try {
@@ -15,7 +15,7 @@ const getProducts = async (url) => {
   }
 };
 
-const containerProducts = document.getElementById("container-products");
+const containerProducts = document.getElementById("order-summary");
 
 const form = document.getElementById("formularioCompra");
 
@@ -23,13 +23,18 @@ const insertarProductos = (contenedor, listaProductos) => {
   contenedor.innerHTML = "";
   listaProductos.forEach((producto) => {
     contenedor.innerHTML += `
-        <article class="cardProducto" name=${producto.id}>
-            <figure>
-                <img src=${producto.imagenes[0]} alt=${producto.nombre}>
-            </figure>
-            <span>$ ${producto.precioUnitario.toLocaleString()}</span>
-            <h3>${producto.nombre}</h3>
-        </article>
+        <div class="foto-order"  name=${producto.id}>
+                <img class="estilos-fotos" src=${producto.imagen} alt=${producto.nombre}>
+                <div class="contenedor-ref">
+                    <p class="referencia">${producto.nombre}</p>
+                    <p class="codigo">Code: ${producto.codigo}</p>
+                </div>
+                <p class="precio">$${producto.precioUnitario}</p>
+            
+                <div id="contenedorTarjeta">
+                    <button class="boton-borrar"><img src="../images/create.png" alt="borrar"></button>
+                </div>
+            </div>
         `;
   });
 };
@@ -53,16 +58,12 @@ const validateDataForm = (dataForm) => {
     }
   }
 
-  if (!dataForm.talla) {
-    emptyFields.push("talla");
-  }
-
-  if (dataForm.nombre.length <= 3) {
+  if (dataForm.nombreCompleto.length <= 3) {
     alert("El nombre debe contener más de 3 caracteres");
     emptyFields.push("nombre");
   }
 
-  if (!emailRegex.test(dataForm.email)) {
+  if (!emailRegex.test(dataForm.correo)) {
     alert("El email ingresado no es valido");
     emptyFields.push("email");
   }
@@ -71,29 +72,25 @@ const validateDataForm = (dataForm) => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const url = `${URL_BASE}productos`;
+  const url = `${URL_BASE}/productos`;
   const productos = await getProducts(url);
-  insertarProductos(containerProducts, productos);
+  insertarProductos(containerProducts, productos.productos);
 });
 
 form.addEventListener("submit", (evento) => {
   evento.preventDefault();
 
-  const newProduct = obtenerDatosDelForm(form);
-  const validation = validateDataForm(newProduct);
+  const cliente = obtenerDatosDelForm(form);
+  
+  const validation = validateDataForm(cliente);
 
   if (validation) {
     alert(
       "El formulario tiene los siguientes datos vacíos " + validation.toString()
     );
   } else {
-    agregarProducto(newProduct, productos); // Asegúrate de que 'productos' esté definido.
-    insertarProductos(containerProducts, productos);
+    localStorage.setItem("informacionCliente", JSON.stringify(cliente));
     form.reset();
+    location.href = "../pages/thank_you_page.html";
   }
 });
-
-const compraCompletada = () => {
-  
-  alert("Compra completada exitosamente");
-};
