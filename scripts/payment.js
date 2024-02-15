@@ -2,7 +2,7 @@
 import { productosShopPage } from "../modules/products.js";
 
 
-const URL_BASE = "https://darling.free.beeceptor.com";
+const URL_BASE = "https://darlingg.free.beeceptor.com";
 //hacemos una petición get
 const getProducts = async (url) => {
   try {
